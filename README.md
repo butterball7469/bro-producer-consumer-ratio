@@ -1,16 +1,23 @@
 PCR - Producer Consumer Ratio
 =====
-This script is a Bro implementation of the Producer-Consomer Ratio described by Carter Bullard and John Gerth at FloCon 2014.
-Their presentation is located at : http://resources.sei.cmu.edu/asset_files/Presentation/2014_017_001_90063.pdf
+This script is a Bro implementation of the Producer Consomer Ratio described by Carter Bullard and John Gerth at FloCon 2014.
+Their presentation is located at: http://resources.sei.cmu.edu/asset_files/Presentation/2014_017_001_90063.pdf
+
+Purpose
+---------
+Bullard and Gerth propose that:
+* "Data exfiltration is a problem"
+* "All network nodes are producers and consumers of data"
+* "[Data] exfiltration is a shift in producer / consumer roles"
+* "Better methods to describe producer / consumers will really help"
 
 Summary
 ---------
-PCR is a metric designed to show the degree to which a network sessions payload is upstream or downstream for the purpose of data exfiltration detection.
+Bullard and Gerth describe PCR as, "A normalized value indicating directionality of application information transfer, independent of data load or rate."
 
-PCR is a normalized value between -1 and 1 with negative values indicating consumption of data and positive values indicating production of data.
+PCR is a value between -1 and 1. Negative values indicate consumption of data (download) and positive values indicate production (upload) of data.
 
--1.0 Consumer <= PCR <= 1.0 Producer
-
+* -1.0 Consumer <= PCR <= 1.0 Producer
 
 Implementation
 ---------
