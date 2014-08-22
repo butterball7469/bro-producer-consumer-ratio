@@ -22,5 +22,5 @@ This implementation of PCR provides two different metrics:
 
 Future work
 ---------
-* Calculate more than one PCR average - one for local networks and other for remote networks
+* Calculate more than one PCR average - one for local networks and another for remote networks
 
